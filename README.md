@@ -63,7 +63,7 @@
         
    4. package.json commands
       - Add the following npm scripts:
-          "format:fix": "npm run prettier -- --write".
+          "format:fix": "prettier --write ./src".
 
 My ___package.json___:
 ```
