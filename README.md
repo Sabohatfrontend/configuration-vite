@@ -20,7 +20,7 @@
         npm install eslint-plugin-react-compiler --save-dev
         ```
 
-        Change eslintrc.cjs:
+      - Change eslintrc.cjs:
         ```
          module.exports = {
         root: true,
@@ -44,21 +44,21 @@
         ```
         npm i -D prettier eslint-config-prettier eslint-plugin-prettier
         ```
-        Create .prettierrc.cjs file in root directory:
+      - Create .prettierrc.cjs file in root directory:
 ```
-module.exports = {
-  trailingComma: "es5",
-  tabWidth: 2,
-  semi: true,
-  singleQuote: true,
-};
+          module.exports = {
+           trailingComma: "es5",
+           tabWidth: 2,
+           semi: true,
+           singleQuote: true,
+           };
 ```
    3. __Husky__
       - Add Husky and configure it to run linting on pre-commit:
         ```
         npm i -D husky
         ```
-        Run
+      - Run
         ``` npx husky init ``` in your terminal.
         
    4. package.json commands
