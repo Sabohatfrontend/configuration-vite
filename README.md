@@ -78,7 +78,7 @@ My ___package.json___:
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
     "prepare": "husky",
-    "format:fix": "npm run prettier -- --write"
+     "format:fix": "prettier --write ./src"
   },
   "dependencies": {
     "react": "^18.3.1",
