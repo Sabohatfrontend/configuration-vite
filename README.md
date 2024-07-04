@@ -60,8 +60,22 @@
         ```
       - Run
         ``` npx husky init ``` in your terminal.
+
+     - Install lint-stages:
+     ``` npm i -D lint-staged ```
         
    4. package.json commands
+      -Add the lint-staged script command in package.json file in the root layer.
+      ``` "lint-staged": {
+          "*.{js,jsx,ts,tsx}": [
+          "eslint --quiet --fix",
+         "prettier --write --ignore-unknown"
+          ],
+          "*.{json,html}": [
+         "prettier --write --ignore-unknown"
+         ]
+         },
+       ```
       - Add the following npm scripts:
           "format:fix": "prettier --write ./src".
 
@@ -78,7 +92,16 @@ My ___package.json___:
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
     "prepare": "husky",
-     "format:fix": "prettier --write ./src"
+    "format:fix": "prettier --write ./src"
+  },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx}": [
+      "eslint --quiet --fix",
+      "prettier --write --ignore-unknown"
+    ],
+    "*.{json,html}": [
+      "prettier --write --ignore-unknown"
+    ]
   },
   "dependencies": {
     "react": "^18.3.1",
@@ -97,6 +120,7 @@ My ___package.json___:
     "eslint-plugin-react-hooks": "^4.6.2",
     "eslint-plugin-react-refresh": "^0.4.7",
     "husky": "^9.0.11",
+    "lint-staged": "^15.2.7",
     "prettier": "^3.3.2",
     "typescript": "^5.2.2",
     "vite": "^5.3.1"
